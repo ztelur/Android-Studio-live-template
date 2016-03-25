@@ -1,0 +1,46 @@
+<templateSet group="AndroidXMLExtend">
+  <template name="txs" value="android:text_size=&quot;$size$&quot;" description="android:text_size=&quot;&quot;" toReformat="false" toShortenFQNames="true">
+    <variable name="size" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="false" />
+    </context>
+  </template>
+  <template name="txc" value="android:text_color=&quot;$color$&quot;" description="android:text_color=&quot;&quot;" toReformat="false" toShortenFQNames="true">
+    <variable name="color" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="false" />
+    </context>
+  </template>
+  <template name="txsc" value="android:text_size=&quot;$size$&quot;&#10;android:text_color=&quot;$color$&quot;" description="text color and text size" toReformat="false" toShortenFQNames="true">
+    <variable name="size" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="color" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="false" />
+    </context>
+  </template>
+  <template name="txall" value="android:text=&quot;$txt$&quot;&#10;android:text_size=&quot;$size$&quot;&#10;android:text_color=&quot;$color$&quot;" description="all text property" toReformat="false" toShortenFQNames="true">
+    <variable name="txt" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="size" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="color" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="false" />
+    </context>
+  </template>
+  <template name="LL" value="    &lt;LinearLayout&#10;        android:layout_width=&quot;$width$&quot;&#10;        android:layout_height=&quot;$height$&quot;&#10;        android:orientation=&quot;$orientation$&quot;&gt;&#10;        &#10;    &lt;/LinearLayout&gt;" description="LInearyLayout" toReformat="false" toShortenFQNames="true">
+    <variable name="width" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="height" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="orientation" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+    </context>
+  </template>
+</templateSet>
