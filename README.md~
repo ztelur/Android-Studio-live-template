@@ -1,16 +1,25 @@
 # Android-Studio-live-template
 
+### Introduce
+&emsp; Live Template of Android Studio for some famous lib
+&emsp;Welcome to replenish
+
+### Support Lib
+
+- RxJava
+- Glide
+
 ### Install
 
 
-Live templates are stored in the following location:
-Windows: <your home directory>\.<product name><version number>\config\templates
+&emsp;Live templates are stored in the following location:
+- Windows: <your home directory>\.<product name><version number>\config\templates
 
-Linux: ~/.<product name><version number>/config/templates
+- Linux: ~/.<product name><version number>/config/templates
 
-OS X: ~/Library/Preferences/<product name><version number>/templates
+- OS X: ~/Library/Preferences/<product name><version number>/templates
 
-Once you found it, copy xml file in which template that you like into it
+&emsp;Once you found it, copy xml file in which template that you like into it
 
 
 ### RxJava.xml
