@@ -1,5 +1,5 @@
 <templateSet group="RxJava">
-  <template name="cobservable" value="rx.Observable&lt;$T$&gt; $variable$ = rx.Observable.create(&#10;    new rx.Observable.OnSubscribe&lt;$T$&gt;() {&#10;        @Override&#10;        public void call(rx.Subscriber&lt;? super $T$&gt; sub) {&#10;            $start$&#10;            sub.onCompleted();&#10;        }&#10;    }&#10;);" description="create a Observable" toReformat="true" toShortenFQNames="true">
+  <template name="cob" value="rx.Observable&lt;$T$&gt; $variable$ = rx.Observable.create(&#10;    new rx.Observable.OnSubscribe&lt;$T$&gt;() {&#10;        @Override&#10;        public void call(rx.Subscriber&lt;? super $T$&gt; sub) {&#10;            $start$&#10;            sub.onCompleted();&#10;        }&#10;    }&#10;);" description="create a Observable" toReformat="true" toShortenFQNames="true">
     <variable name="T" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="variable" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="start" expression="" defaultValue="" alwaysStopAt="true" />
@@ -13,7 +13,7 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="csubscriber" value="Subscriber&lt;$T$&gt; $variable$ = new Subscriber&lt;$T$&gt;() {&#10;    @Override&#10;    public void onNext($T$ s) {&#10;        &#10;    }&#10;&#10;    @Override&#10;    public void onCompleted() {&#10;        &#10;    }&#10;&#10;    @Override&#10;    public void onError(Throwable e) {&#10;        &#10;    }&#10;};" description="create a Subscriber" toReformat="true" toShortenFQNames="true">
+  <template name="csub" value="Subscriber&lt;$T$&gt; $variable$ = new Subscriber&lt;$T$&gt;() {&#10;    @Override&#10;    public void onNext($T$ s) {&#10;        &#10;    }&#10;&#10;    @Override&#10;    public void onCompleted() {&#10;        &#10;    }&#10;&#10;    @Override&#10;    public void onError(Throwable e) {&#10;        &#10;    }&#10;};" description="create a Subscriber" toReformat="true" toShortenFQNames="true">
     <variable name="T" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="variable" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
@@ -51,7 +51,7 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="filter1" value=".filter(new rx.functions.Func1&lt;$T$, Boolean&gt;() {&#10;        @Override&#10;        public Boolean call($T$ param) {&#10;            &#10;            return true;&#10;        }&#10;    })" description="filter with func1" toReformat="true" toShortenFQNames="true">
+  <template name="ft1" value=".filter(new rx.functions.Func1&lt;$T$, Boolean&gt;() {&#10;        @Override&#10;        public Boolean call($T$ param) {&#10;            &#10;            return true;&#10;        }&#10;    })" description="filter with func1" toReformat="true" toShortenFQNames="true">
     <variable name="T" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_CODE" value="true" />
@@ -63,7 +63,7 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="sobio" value=".subscribeOn(rx.Scheduler.io())" description="subscribeOn(Schedulers.io())" toReformat="true" toShortenFQNames="true">
+  <template name="subio" value=".subscribeOn(rx.Scheduler.io())" description="subscribeOn(Schedulers.io())" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_CODE" value="true" />
       <option name="JAVA_STATEMENT" value="true" />
@@ -74,7 +74,7 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="obom" value=".observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())" description="observeOn(AndroidSchedulers.mainThread())" toReformat="true" toShortenFQNames="true">
+  <template name="obmain" value=".observeOn(rx.android.schedulers.AndroidSchedulers.mainThread())" description="observeOn(AndroidSchedulers.mainThread())" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_CODE" value="true" />
       <option name="JAVA_STATEMENT" value="true" />
@@ -86,6 +86,45 @@
     </context>
   </template>
   <template name="na0" value="new rx.functions.Action0() {&#10;    @Override&#10;    public void call() {&#10;        Log.d(tag, &quot;completed&quot;);&#10;    }&#10;};" description="create an Action0 object" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="job" value="rx.Observable&lt;$T$&gt; observable = rx.Observable.just($input$);" description="create observable by Observable.just" toReformat="true" toShortenFQNames="true">
+    <variable name="T" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="input" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="fob" value="rx.Observable observable = rx.Observable.from($input$);" description="create observable by Observable.from" toReformat="true" toShortenFQNames="true">
+    <variable name="input" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_CODE" value="true" />
+      <option name="JAVA_STATEMENT" value="true" />
+      <option name="JAVA_EXPRESSION" value="true" />
+      <option name="JAVA_DECLARATION" value="true" />
+      <option name="JAVA_COMMENT" value="false" />
+      <option name="JAVA_STRING" value="false" />
+      <option name="COMPLETION" value="true" />
+    </context>
+  </template>
+  <template name="fmp1" value=".flatMap(new rx.functions.Func1&lt;$T1$, rx.Observable&lt;$T2$&gt;&gt;() {&#10;        @Override&#10;        public rx.Observable&lt;$T2$&gt; call($T1$ token) {&#10;            $input$&#10;        }&#10;    })" description="flatmap with func1" toReformat="true" toShortenFQNames="true">
+    <variable name="T1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="T2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="input" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_CODE" value="true" />
       <option name="JAVA_STATEMENT" value="true" />
