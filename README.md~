@@ -24,6 +24,7 @@
 
 ### RxJava.xml
 > 助记法则：动词+名词
+> 代码片段会自动进行缩进，并且导入需要的包名并且去掉类名前的包名。
 
 - `cob`: "create the Observable by Observable.create" 
 
