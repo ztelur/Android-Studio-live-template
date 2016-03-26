@@ -26,8 +26,9 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="na1" value="new rx.functions.Action1&lt;$T$&gt;() {&#10;    @Override&#10;    public void call($T$ param) {&#10;        System.out.println(param);&#10;    }&#10;};" description="create an Action1 object" toReformat="true" toShortenFQNames="true">
+  <template name="na1" value="new rx.functions.Action1&lt;$T$&gt;() {&#10;    @Override&#10;    public void call($T$ param) {&#10;        $input$&#10;    }&#10;};" description="create an Action1 object" toReformat="true" toShortenFQNames="true">
     <variable name="T" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="input" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_CODE" value="true" />
       <option name="JAVA_STATEMENT" value="true" />
@@ -63,7 +64,7 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="subio" value=".subscribeOn(rx.Scheduler.io())" description="subscribeOn(Schedulers.io())" toReformat="true" toShortenFQNames="true">
+  <template name="subio" value=".subscribeOn(rx.Schedulers.io())" description="subscribeOn(Schedulers.io())" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_CODE" value="true" />
       <option name="JAVA_STATEMENT" value="true" />
@@ -85,7 +86,8 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
-  <template name="na0" value="new rx.functions.Action0() {&#10;    @Override&#10;    public void call() {&#10;        Log.d(tag, &quot;completed&quot;);&#10;    }&#10;};" description="create an Action0 object" toReformat="false" toShortenFQNames="true">
+  <template name="na0" value="new rx.functions.Action0() {&#10;    @Override&#10;    public void call() {&#10;        $input$&#10;    }&#10;};" description="create an Action0 object" toReformat="false" toShortenFQNames="true">
+    <variable name="input" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JAVA_CODE" value="true" />
       <option name="JAVA_STATEMENT" value="true" />
