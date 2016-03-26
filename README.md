@@ -26,6 +26,20 @@
 > 助记法则：动词+名词
 > 代码片段会自动进行缩进，并且导入需要的包名并且去掉类名前的包名。
 
+#### List
+- `cob`: "create the Observable by Observable.create" 
+- `job`: "create observable by Observable.just"
+- `fob`: "create observable by Observable.from"
+- `csub`: "create the Subscriber"
+- `mp1`: "map with func1"
+- `ft1`: "filter with func1"
+- `fmp1`: "flatmap with func1"
+- `na0`: "create an Action0 object"
+- `na1`: "create an Action1 object"
+- `obmain`: "observeOn(AndroidSchedulers.mainThread())"
+- `subio`: "subscribeOn(Schedulers.io())"
+
+#### Detail
 - `cob`: "create the Observable by Observable.create" 
 
 ``` java
